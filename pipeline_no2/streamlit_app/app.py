@@ -1,15 +1,20 @@
+
 import os
 import joblib
 import pandas as pd
 import streamlit as st
+from pathlib import Path
 
 st.set_page_config(page_title="UTS Model Deployment", layout="wide")
 
 # =========================
 # Load saved models
 # =========================
-classification_model_path = os.path.join("..", "artifacts", "classification_pipeline.pkl")
-regression_model_path = os.path.join("..", "artifacts", "regression_pipeline.pkl")
+BASE_DIR = Path(__file__).resolve().parent
+ARTIFACTS_DIR = BASE_DIR.parent / "artifacts"
+
+classification_model_path = ARTIFACTS_DIR / "classification_pipeline.pkl"
+regression_model_path = ARTIFACTS_DIR / "regression_pipeline.pkl"
 
 classification_model = joblib.load(classification_model_path)
 regression_model = joblib.load(regression_model_path)
