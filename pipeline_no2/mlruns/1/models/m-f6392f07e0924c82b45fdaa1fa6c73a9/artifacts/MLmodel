@@ -1,0 +1,23 @@
+artifact_path: file:C:/Users/user/OneDrive/Documents/UTS_Model_Deployment_Jeremy_2802500902/pipeline_no2/mlruns/1/models/m-f6392f07e0924c82b45fdaa1fa6c73a9/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.9.0
+model_id: m-f6392f07e0924c82b45fdaa1fa6c73a9
+model_size_bytes: 4598
+model_uuid: m-f6392f07e0924c82b45fdaa1fa6c73a9
+prompts: null
+run_id: 687eb3542a3949a8976c70c4915fb6cb
+utc_time_created: '2026-04-20 07:50:49.778358'
